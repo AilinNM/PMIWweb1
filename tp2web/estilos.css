@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --fondo:       #e9ecef;      /* gris claro */
+    --fondo-card:  #ffffff;
+    --texto:       #1f2933;
+    --acento:      #6a4c93;      /* violeta */
+    --acento-2:    #3bb273;      /* verde */
+    --sombra:      0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, var(--acento), var(--acento-2));
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 1rem 0;
+}
+
+header h1 {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: 0 0 0.5rem;
+    line-height: 1.1;
+}
+
+header p.destacado {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    display: inline-block;
+    padding: 0.6rem 1.1rem;
+    color: var(--acento);
+    background-color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li a:hover {
+    background-color: var(--acento);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem;
+}
+
+main section {
+    background-color: var(--fondo-card);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra);
+}
+
+main section h2 {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--acento);
+    margin-top: 0;
+    text-align: center;
+}
+
+main section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--acento-2);
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+.destacado {
+    font-weight: 600;
+    font-style: italic;
+}
+
+blockquote {
+    border-left: 5px solid var(--acento-2);
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-style: italic;
+    background-color: #f4f7f5;
+    border-radius: 0 8px 8px 0;
+}
+
+.tarjeta {
+    background-color: #f8f9fb;
+    border: 2px solid #e1e5ea;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin: 1.2rem 0;
+}
+
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.02);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #5f6b76;
+    margin-top: 0.6rem;
+    font-style: italic;
+}
+
+details {
+    margin: 1.2rem 0;
+    padding: 0.8rem 1rem;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--acento);
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+.ficha-tecnica {
+    margin-top: 1rem;
+}
+
+.ficha-tecnica a {
+    color: var(--acento);
+    font-weight: 600;
+}
+
+main section ul,
+main section ol {
+    padding-left: 1.5rem;
+}
+
+main section li {
+    margin-bottom: 0.4rem;
+}
+
+.boton-volver {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--acento);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-volver:hover {
+    background-color: var(--acento-2);
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: var(--acento);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.adaptable {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 2rem 1rem 0;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p.destacado {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Menú en columna */
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.3rem;
+    }
+
+    header nav ul li a {
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    main {
+        padding: 1rem 0.8rem;
+    }
+
+    main section {
+        padding: 1.2rem;
+    }
+
+    main section h2 {
+        font-size: 1.8rem;
+    }
+
+    blockquote {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .boton-volver {
+        display: block;
+        text-align: center;
+    }
+
+    footer {
+        padding: 1.2rem 1rem;
+    }
+}
+
+
+
